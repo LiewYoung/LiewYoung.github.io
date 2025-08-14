@@ -7,23 +7,24 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="Author：Liew.Y Date: 2025-03-26 16:35 Github Profile: LiewYoung   破山中贼易，破心中贼难。 -王阳明   前情提要 本次更新主抓可用性、及时性、高效性致力于提升大学生生活质量，将学生从枯燥无味的重复且无意义的劳作中解放出来。使得我们真正实现学习价值。同时结合大部分学生对电脑的掌握情况，不足一些常用软件。  日常多嘴 OOP也就是面向对">
+<meta name="description" content="什么是Kadane算法 Kadane算法说人话就是用来解决子数组和的问题。什么是子数组？子数组就是说一个数组是原数组的子集且元素连续。  Kadane算法的基本思想 就是基于动态规划一种思想：基本过程如下（关于动态规划的内容请在博客内搜索）：就是说我们每次都应该选取当前情况下最优解。举个例子：  对于数组[1,1,-3,-1,3] 我们可以很容易的得到最大子数组是[3],和为3。 但是如果数组不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="资源整理_2">
-<meta property="og:url" content="https://blog.liewyoung.top/2025/08/10/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86-2/index.html">
+<meta property="og:title" content="Kadane算法">
+<meta property="og:url" content="https://blog.liewyoung.top/2025/08/14/Kadane%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Liew.Y&#39; blogs">
-<meta property="og:description" content="Author：Liew.Y Date: 2025-03-26 16:35 Github Profile: LiewYoung   破山中贼易，破心中贼难。 -王阳明   前情提要 本次更新主抓可用性、及时性、高效性致力于提升大学生生活质量，将学生从枯燥无味的重复且无意义的劳作中解放出来。使得我们真正实现学习价值。同时结合大部分学生对电脑的掌握情况，不足一些常用软件。  日常多嘴 OOP也就是面向对">
+<meta property="og:description" content="什么是Kadane算法 Kadane算法说人话就是用来解决子数组和的问题。什么是子数组？子数组就是说一个数组是原数组的子集且元素连续。  Kadane算法的基本思想 就是基于动态规划一种思想：基本过程如下（关于动态规划的内容请在博客内搜索）：就是说我们每次都应该选取当前情况下最优解。举个例子：  对于数组[1,1,-3,-1,3] 我们可以很容易的得到最大子数组是[3],和为3。 但是如果数组不">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-10T15:53:38.000Z">
-<meta property="article:modified_time" content="2025-08-11T16:42:29.717Z">
+<meta property="article:published_time" content="2025-08-14T10:37:00.000Z">
+<meta property="article:modified_time" content="2025-08-14T11:53:20.573Z">
 <meta property="article:author" content="LiewYoung">
-<meta property="article:tag" content="资源整理">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
 
     <meta name="keywords" content="LiewYoung">
 
 
-<title >资源整理_2</title>
+<title >Kadane算法</title>
 
 <!-- Favicon -->
 
@@ -62,7 +63,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"blog.liewyoung.top","author":"LiewYoung","root":"/","typed_text":null,"theme_version":"2.2.6","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/logo/AlphaOne.png","icon16":"/logo/AlphaOne.png","icon32":"/logo/AlphaOne.png","apple_touch_icon":null,"webmanifest":null,"visibilitychange":true,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！","dark_logo":"/logo/AlphaOne_dark.png"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"},"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"path":"search.json"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-08-12 00:42:29"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-08-14 19:53:20"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.6" id="trm-switch-style">
@@ -228,7 +229,7 @@
     <div class="trm-banner">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://pic1.imgdb.cn/item/689a1d6f58cb8da5c81b0bdb.png">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://pic1.imgdb.cn/item/689dcd6958cb8da5c8250d68.jpg">
     <!-- banner cover end -->
     
 
@@ -244,10 +245,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            All for one,one for all.
+                            Code is cheap,show me your thought.
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            资源整理_2
+                            Kadane算法
                         </h1>
 
                         
@@ -359,13 +360,13 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-            08/10
+            08/14
         </div>
     </div>
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            23:53
+            18:37
         </div>
     </div>
     <div class="col-sm-4">
@@ -377,64 +378,30 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <p><strong>Author</strong>：Liew.Y<br />
-<strong>Date</strong>: 2025-03-26 16:35<br />
-<strong>Github Profile</strong>: <a target="_blank" rel="noopener" href="https://github.com/LiewYoung">LiewYoung </a></p>
+    <h2 id="什么是kadane算法"><a class="markdownIt-Anchor" href="#什么是kadane算法"></a> 什么是Kadane算法</h2>
+<p>Kadane算法说人话就是用来解决子数组和的问题。什么是子数组？<br>子数组就是说一个数组是<strong>原数组的子集且元素连续。</strong></p>
+<h2 id="kadane算法的基本思想"><a class="markdownIt-Anchor" href="#kadane算法的基本思想"></a> Kadane算法的基本思想</h2>
+<p>就是基于<em><strong>动态规划</strong></em>一种思想：基本过程如下（关于动态规划的内容请在博客内搜索）：<br>就是说我们每次都应该选取当前情况下最优解。举个例子：<br></p>
 <blockquote>
-<p>破山中贼易，破心中贼难。<br />
--王阳明</p>
-</blockquote>
-<h1 id="前情提要"><a class="markdownIt-Anchor" href="#前情提要"></a> 前情提要</h1>
-<p>本次更新主抓<strong>可用性、及时性、高效性</strong>致力于提升大学生生活质量，将学生从枯燥无味的重复且无意义的劳作中解放出来。使得我们真正实现学习价值。同时结合大部分学生对电脑的掌握情况，不足一些常用软件。</p>
-<blockquote>
-<p><strong>日常多嘴</strong><br />
-OOP也就是面向对象是一种思想，请不要把它和编程语言绑定OK吧，下学期学JAVA可别就会用JAVA写个类的继承就说自己面向对象了。</p>
-</blockquote>
-<blockquote>
-<p><strong>一个线程要么被分离（detach），让系统自动回收资源；要么被连接（join），由主线程手动等待并回收资源。两者必须选其一，否则可能导致资源泄漏或未定义行为。</strong></p>
-</blockquote>
-<h2 id="上期补全"><a class="markdownIt-Anchor" href="#上期补全"></a> 上期补全</h2>
-<p><strong>计算机教育课程系列</strong><br />
-<a target="_blank" rel="noopener" href="https://missing-semester-cn.github.io/">计算机教育中缺失的一课 · the missing semester of your cs education</a><br />
-As we all know,高校本科阶段一般是教不了你什么真东西的。但是这些基础很重要：</p>
+<p>对于数组[1,1,-3,-1,3]<br />
+我们可以很容易的得到最大子数组是[3],和为3。<br />
+但是如果数组不这么简单我们应该如何解决？<br />
+借助<strong>Kadane算法</strong>我们可以使用如下方法：</p>
 <ol>
-<li><strong>数据结构</strong></li>
-<li><strong>计算机组成原理</strong></li>
-<li><strong>操作系统</strong></li>
-<li><strong>计算机网络</strong></li>
+<li>设置两个变量，cMax（当前最大值）、gMax（全局最大值）</li>
+<li>我们把他们都初始为nums[0]</li>
+<li>接着我们进行累加，比较当前值和cMax+当前值的关系，如果当前值大于cMax+当前值，我们就应该舍弃cMax，否则应该保留，也就是把当前的值作为新的数组的开始。（思考一下为什么）</li>
+<li>这样我们就通过一次遍历实现了找到和最大的子数组。</li>
 </ol>
-<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
-<h2 id="优质生活"><a class="markdownIt-Anchor" href="#优质生活"></a> 优质生活</h2>
-<p>🎢<strong>工具学习类型的网站</strong><a target="_blank" rel="noopener" href="https://liaoxuefeng.com/">首页 - 廖雪峰的官方网站</a><br />
-As you can see! 一个类似编程扫盲的网站</p>
-<p>🧐<strong>OCS网课助手</strong><a target="_blank" rel="noopener" href="https://docs.ocsjs.com/">OCS网课助手</a><br />
-你是否厌倦了枯燥且无聊的网课，面对100+的测试题你是否束手无策，没关系！现在你可以借助网课助手实现刷题刷课自由！！！<em><strong>Revolution</strong></em>！</p>
-<p>💻<strong>Optimizer</strong>卓越的Win11优化工具（这里F ** K Windows)<a target="_blank" rel="noopener" href="https://github.com/hellzerg/optimizer/releases">Releases · hellzerg/optimizer</a></p>
-<p>🚀Nanazip快抛弃你那丑陋的<strong>WinRAR</strong>和像乌龟一样的自带解压缩吧<a target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9N8G7TSCL18R?hl=neutral&amp;gl=CN&amp;ocid=pdpshare">Nanazip</a><br />
-实际上我还是推荐有能力的去用7zip</p>
-<p>🙌<strong>Vmware</strong>免费好用的虚拟机软件，你用来干啥我不管，你不会下载请看<a target="_blank" rel="noopener" href="https://blog.csdn.net/air__j/article/details/142798842">VMware Workstation Pro 17官网下载安装教程_vmware17pro下载-CSDN博客</a></p>
-<blockquote>
-<p>再多嘴一次，你用Linux的话，为什么不用WSL呢？</p>
 </blockquote>
-<h2 id="github选集"><a class="markdownIt-Anchor" href="#github选集"></a> Github选集</h2>
-<p>入门日报<a target="_blank" rel="noopener" href="https://github.com/521xueweihan/HelloGitHub">521xueweihan/HelloGitHub: :octocat: 分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.</a></p>
-<p>制作自己的编程语言<a target="_blank" rel="noopener" href="https://www.buildyourownlisp.com/chapter2_installation">Make your own</a></p>
-<blockquote>
-<p>我多嘴一句，如果你连Makefile都不会写，gcc是什么都不知道，动态库和静态库都不知道基本区别（不需要你知道太深）你还是好好练练吧。</p>
-</blockquote>
-<p>Coding-interview-university<a target="_blank" rel="noopener" href="https://github.com/jwasham/coding-interview-university">jwasham/coding-interview-university: A complete computer science study plan to become a software engineer.</a></p>
-<h2 id="卓越交流"><a class="markdownIt-Anchor" href="#卓越交流"></a> 卓越交流</h2>
-<p><strong>V2EX</strong>程序员的社区，纯净交流<a target="_blank" rel="noopener" href="https://us.v2ex.com/help">V2EX › 站点帮助首页</a>请使用魔法访问</p>
-<h2 id="ai小事记"><a class="markdownIt-Anchor" href="#ai小事记"></a> AI小事记</h2>
-<blockquote>
-<p>确实是没活了😶‍🌫️</p>
-</blockquote>
-<p>字节跳动旗下AI IDE（基于VScode）正式支持MCP功能。</p>
-<p><strong>AI工具集合</strong><a target="_blank" rel="noopener" href="https://ai-bot.cn/">AI工具集官网 | 1000+ AI工具集合，国内外AI工具集导航大全</a></p>
-<p><strong>看什么呢？学完了吗你！</strong> 😂</p>
-<blockquote>
-<p>Win comes all day （赢麻了）</p>
-</blockquote>
+<p>现在我们来思考：为什么要在如果当前值大于cMax+当前值的情况下舍弃cMax？<br>这是一个很简单但又不简单的问题，我会使用相对详细的思想来解释。<br>我们可以先思考什么情况下我们应该放弃前面的值（假设之前和没有最大值）：<br>这是十分容易的，我们会在小于零的时候舍弃，因为此时前面的数组对我们的值没有正向作用。这样我们理解了为什么。<br>现在我们思考如何做？当一个负数+正数时我们应该舍弃值，这就是解释。<br><br />
+现在我们来思考如何找到最大值，比较标准是什么？<br>这自然是一个很简单的问题，我们只需要找到比前一个最值更大的和就可以找到最终最大值。所以我们需要进行比较，每次加和之后cMax和gMax就进行比较，如果最大就更改gMax，这样我们就解决了找到最大子数组和的问题。</p>
+<h2 id="more那么如何找到下标范围呢"><a class="markdownIt-Anchor" href="#more那么如何找到下标范围呢"></a> MORE那么如何找到下标范围呢？</h2>
+<p>这是十分容易的，我们每次只需要储存最大和的Start和End下标，使用Temp来暂时储存不知道会不会是最大值的新的开始头下标。</p>
+<h2 id="show-me-the-code"><a class="markdownIt-Anchor" href="#show-me-the-code"></a> SHOW ME THE CODE</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">long</span> n = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line"></span><br><span class="line">            cin&gt;&gt;nums[i];</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">		<span class="comment">/*定义全区最大值和当前最大值*/</span></span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> global_max = nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> current_max = nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> start=<span class="number">0</span>,end=<span class="number">0</span>,temp = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i = <span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(nums[i]&gt;nums[i]+current_max)&#123;</span><br><span class="line"></span><br><span class="line">                current_max = nums[i];</span><br><span class="line"></span><br><span class="line">                temp = i;</span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">                current_max = current_max + nums[i];</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(current_max&gt;global_max)&#123;</span><br><span class="line"></span><br><span class="line">                global_max = current_max;</span><br><span class="line"></span><br><span class="line">                start = temp;</span><br><span class="line"></span><br><span class="line">                end = i;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="recommend推荐练习题"><a class="markdownIt-Anchor" href="#recommend推荐练习题"></a> RECOMMEND推荐练习题</h2>
+<p>推荐航电OJ：1003题</p>
 
 </article>
     
@@ -450,62 +417,31 @@ As you can see! 一个类似编程扫盲的网站</p>
         </h5>
     </div>
     
+    
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2025/08/14/Kadane%E7%AE%97%E6%B3%95/" class="trm-cover-frame trm-anima-link">
+        <a href="/2025/08/10/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86-2/" class="trm-cover-frame trm-anima-link">
             
             
-                <img alt="cover" class="no-fancybox" src="https://pic1.imgdb.cn/item/689dcd6958cb8da5c8250d68.jpg">
+                <img alt="cover" class="no-fancybox" src="https://pic1.imgdb.cn/item/689a1d6f58cb8da5c81b0bdb.png">
             
         </a>
         
         <div class="trm-card-descr">
             <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/ACM/">
-                    ACM
+                <a href=" /categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">
+                    计算机基础
                 </a>
             </div>
             <h5>
-                <a href="/2025/08/14/Kadane%E7%AE%97%E6%B3%95/" class="trm-anima-link">
-                    Kadane算法
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>25/08/14</li>
-                <li>18:37</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2025/08/10/SDL%E5%85%A5%E9%97%A8/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://pic1.imgdb.cn/item/689a1d8658cb8da5c81b0beb.png">
-            
-        </a>
-        
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">
-                    第三方库
-                </a>
-            </div>
-            <h5>
-                <a href="/2025/08/10/SDL%E5%85%A5%E9%97%A8/" class="trm-anima-link">
-                    SDL入门
+                <a href="/2025/08/10/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86-2/" class="trm-anima-link">
+                    资源整理_2
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
                 <li>25/08/10</li>
-                <li>23:26</li>
+                <li>23:53</li>
                 
                 
             </ul>
